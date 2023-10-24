@@ -2471,7 +2471,7 @@ footer .info {
 	clear: both;
 }
 
-footer .footer-logo {
+/* footer .footer-logo {
 	width: 100px;
 	height: 23px;
 	background: url("../images/logow.png") no-repeat center;
@@ -2482,7 +2482,7 @@ footer .footer-logo {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";
 	opacity: 0.1;
 	zoom: 1;
-}
+} */
 
 /* copyright */
 footer .copyright {
