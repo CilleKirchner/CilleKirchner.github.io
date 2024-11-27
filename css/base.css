@@ -333,6 +333,10 @@ ol {
 	list-style: decimal;
 }
 
+p{
+	color: white;
+}
+
 ol,
 ul.square,
 ul.circle,
@@ -585,7 +589,7 @@ img {
 		width: 75%;
 	}
 
-	.tab-whole,
+	.tab-Fole,
 	.row .tab-whole {
 		width: 100%;
 	}
