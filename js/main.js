@@ -13,7 +13,7 @@ function currentSlide(n) {
 
 function showSlides(n) {
   let i;
-  for(j=1; j<9; j++){
+  for(j=1; j<3; j++){
 	let slides = document.getElementsByClassName("mySlides"+j);
 	let dots = document.getElementsByClassName("dot");
 	if (n > slides.length) {slideIndex = 1}
