@@ -1,33 +1,66 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+// Initialize slide indexes for both slideshows
+let slideIndex1 = 1;
+let slideIndex2 = 1;
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// Show slides for slideshow 1
+showSlides(slideIndex1, 1);
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// Show slides for slideshow 2
+showSlides(slideIndex2, 2);
 
-function showSlides(n) {
-  let i;
-  for(j=1; j<3; j++){
-	let slides = document.getElementsByClassName("mySlides"+j);
-	let dots = document.getElementsByClassName("dot");
-	if (n > slides.length) {slideIndex = 1}
-	if (n < 1) {slideIndex = slides.length}
-	for (i = 0; i < slides.length; i++) {
-	  slides[i].style.display = "none";
-	}
-	for (i = 0; i < dots.length; i++) {
-	  dots[i].className = dots[i].className.replace(" active", "");
-	}
-	slides[slideIndex-1].style.display = "block";
-	dots[slideIndex-1].className += " active";
+// Next/previous controls for slideshow 1
+function plusSlides(n, slideshowNumber) {
+  if (slideshowNumber === 1) {
+    showSlides(slideIndex1 += n, 1);
+  } else if (slideshowNumber === 2) {
+    showSlides(slideIndex2 += n, 2);
   }
 }
+
+// Thumbnail image controls for slideshow 1
+function currentSlide(n, slideshowNumber) {
+  if (slideshowNumber === 1) {
+    showSlides(slideIndex1 = n, 1);
+  } else if (slideshowNumber === 2) {
+    showSlides(slideIndex2 = n, 2);
+  }
+}
+
+function showSlides(n, slideshowNumber) {
+  let i;
+  let slides;
+  let dots;
+  
+  // Determine which slideshow to control
+  if (slideshowNumber === 1) {
+    slides = document.getElementsByClassName("mySlides1");
+    dots = document.getElementsByClassName("dot1");
+    if (n > slides.length) {slideIndex1 = 1}
+    if (n < 1) {slideIndex1 = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex1-1].style.display = "block";
+    dots[slideIndex1-1].className += " active";
+  } else if (slideshowNumber === 2) {
+    slides = document.getElementsByClassName("mySlides2");
+    dots = document.getElementsByClassName("dot2");
+    if (n > slides.length) {slideIndex2 = 1}
+    if (n < 1) {slideIndex2 = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex2-1].style.display = "block";
+    dots[slideIndex2-1].className += " active";
+  }
+}
+
 
 /*---------------------------------------------------------------------------------
 /*
