@@ -1,3 +1,20 @@
+.popup-modal .media {
+	width: 100%;
+}
+
+.popup-modal .media iframe {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	display: block;
+}
+
+.popup-modal {
+	max-width: 600px; /* Zorg dat alles binnen een vaste breedte valt */
+	margin: 0 auto;
+}
+
+
 /* Slideshow container */
 .slideshow-container {
 	max-width: 1000px;
